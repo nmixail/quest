@@ -8,6 +8,7 @@ button.onclick = function (event) {
 	if (text.endsWith(" ")) {
 		text = text.slice(0, text.length - 1);
 	}
+	input.value = "";
 	switch (text) {
 		case "одетый": {
 			if (count == 1) {
