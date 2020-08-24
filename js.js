@@ -2,15 +2,13 @@
 let button = document.querySelector("button");
 let input = document.querySelector("input");
 
-
-
 button.onclick = function () {
 	let text = input.value.toLowerCase();
 	if (text.endsWith(" ")) {
 		text = text.slice(0, text.length - 1);
 	}
 	switch (text) {
-		case "ты в пятый раз,": {
+		case "ты в": {
 			window.location.href = "group_red/index.html";
 			break;
 		}
@@ -34,5 +32,8 @@ button.onclick = function () {
 			window.location.href = "group_brown/index.html";
 			break;
 		}
+		default: {
+			alert("Неверный код!");
+		}
 	}
-}
+};
