@@ -2,9 +2,12 @@
 let button = document.querySelector("button");
 let input = document.querySelector("input");
 let count = 1;
-console.log(`div.class.stage_${count}`);
+
 button.onclick = function (event) {
 	let text = input.value.toLowerCase();
+	if (text.endsWith(" ")) {
+		text = text.slice(0, text.length - 1);
+	}
 	switch (text) {
 		case "одетый": {
 			if (count == 1) {
