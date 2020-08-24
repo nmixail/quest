@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 html,
 body {
 	height: 100%;
 	margin: 0;
+	font-family: 'Lobster', cursive;
 }
 
 .quest {
@@ -24,17 +27,20 @@ body {
 	align-content: space-around;
 	height: 150px;
 	margin: auto;
+	width: 100%;
 }
 
 h3 {
-	font-size: 25px;
+	font-size: 24px;
 	margin: 0;
 }
 
 input {
 	font-size: 22px;
+	font-family: 'Lobster', cursive;
 }
 
 button {
 	font-size: 22px;
+	font-family: 'Lobster', cursive;
 }
