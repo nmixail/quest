@@ -17,7 +17,7 @@ function error_show() {
 function check(number) {
 	if (count == number) {
 		show();
-		if (count == 7) {
+		if (count == 8) {
 			document.querySelector(".secret_word").style.display = "none";
 			document.querySelector(".remember").classList.add("b-show");
 		}
