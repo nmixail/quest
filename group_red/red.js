@@ -1,9 +1,14 @@
 "use strict";
 let button = document.querySelector("button");
 let input = document.querySelector("input");
+let btn_close = document.querySelector(".modal_error button");
+let modal_error = document.querySelector(".modal_error");
+let bg_layer = document.querySelector(".bg_layer");
 let count = 1;
 
-button.onclick = function (event) {
+input.focus();
+
+button.onclick = function () {
 	let text = input.value.toLowerCase();
 	if (text.endsWith(" ")) {
 		text = text.slice(0, text.length - 1);
@@ -11,71 +16,47 @@ button.onclick = function (event) {
 	input.value = "";
 	switch (text) {
 		case "пятый раз,": {
-			if (count == 1) {
-				count++;
-				document.querySelector(`div.class.stage_${count}`).classList.add("b-show");
-				document.querySelector(`div.arrow.stage_${count}`).classList.add("b-show");
-			}
+			check(1);
 			break;
 		}
 
 		case "одетый": {
-			if (count == 2) {
-				count++;
-				document.querySelector(`div.class.stage_${count}`).classList.add("b-show");
-				document.querySelector(`div.arrow.stage_${count}`).classList.add("b-show");
-			}
+			check(2);
 			break;
 		}
 
 		case "в": {
-			if (count == 3) {
-				count++;
-				document.querySelector(`div.class.stage_${count}`).classList.add("b-show");
-				document.querySelector(`div.arrow.stage_${count}`).classList.add("b-show");
-			}
+			check(3);
 			break;
 		}
 
 		case "форму,": {
-			if (count == 4) {
-				count++;
-				document.querySelector(`div.class.stage_${count}`).classList.add("b-show");
-				document.querySelector(`div.arrow.stage_${count}`).classList.add("b-show");
-			}
+			check(4);
 			break;
 		}
 
 		case "спешишь начать": {
-			if (count == 5) {
-				count++;
-				document.querySelector(`div.class.stage_${count}`).classList.add("b-show");
-				document.querySelector(`div.arrow.stage_${count}`).classList.add("b-show");
-			}
+			check(5);
 			break;
 		}
 
 		case "еще один": {
-			if (count == 6) {
-				count++;
-				document.querySelector(`div.class.stage_${count}`).classList.add("b-show");
-				document.querySelector(`div.arrow.stage_${count}`).classList.add("b-show");
-			}
+			check(6);
 			break;
 		}
 		case "учебный год!": {
-			if (count == 7) {
-				count++;
-				document.querySelector(".secret_word").style.display = "none";
-				document.querySelector(`div.class.stage_${count}`).classList.add("b-show");
-				document.querySelector(`div.arrow.stage_${count}`).classList.add("b-show");
-				document.querySelector(".remember").classList.add("b-show");
-			}
+			check(7);
 			break;
 		}
 		default: {
-			alert("Неверный код!");
+			error_show();
 		}
 	}
 	document.body.scrollIntoView(false);
+};
+
+btn_close.onclick = function () {
+	bg_layer.style.display = "none";
+	modal_error.style.display = "none";
+	input.focus();
 };
