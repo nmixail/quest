@@ -12,23 +12,23 @@ button.onclick = function () {
 			window.location.href = "group_red/index.html";
 			break;
 		}
-		case "желтый": {
+		case "в пятом классе": {
 			window.location.href = "group_yellow/index.html";
 			break;
 		}
-		case "зеленый": {
+		case "ты в пятый": {
 			window.location.href = "group_green/index.html";
 			break;
 		}
-		case "белый": {
+		case "ждет": {
 			window.location.href = "group_white/index.html";
 			break;
 		}
-		case "синий": {
+		case "учебный": {
 			window.location.href = "group_blue/index.html";
 			break;
 		}
-		case "коричневый": {
+		case "в пятый": {
 			window.location.href = "group_brown/index.html";
 			break;
 		}
