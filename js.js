@@ -33,7 +33,7 @@ button.onclick = function () {
 			break;
 		}
 		case "в пятый": {
-			window.location.href = "group_brown/index.html";
+			window.location.href = "group_black/index.html";
 			break;
 		}
 		default: {
